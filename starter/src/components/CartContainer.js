@@ -1,9 +1,11 @@
 import React from 'react';
 import CartItem from '../components/CartItem.js';
 import {useSelector, useDispatch} from 'react-redux';
+import { actions } from '../features/cart/cartSlice.js';
 
 const CartContainer = () => {
     const {amount, cartItems, total} = useSelector((state) => state.cart);
+
     const dispatch = useDispatch();
     if(amount < 1){
         return(
@@ -32,7 +34,6 @@ const CartContainer = () => {
             <footer>
                 <hr />
                 <div className="cart-total">
-                    <h4>Cart Total</h4>
                     <h4>Total<span>{total}</span></h4>
                 </div>
             </footer>
