@@ -13,10 +13,16 @@ name: 'cart',
 initialState,
 reducers: {
     clearCart: (state) => {
-        state.cartitems = [];
+        state.cartItems = [];
     },
+    removeItem: (state, action) => {
+
+    },
+    addItem: (state, action) => {
+
+    }
 }
 });
 
-console.log(cartSlice)
+
 export const actions = cartSlice.actions;
