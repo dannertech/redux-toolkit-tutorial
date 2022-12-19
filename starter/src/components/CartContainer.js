@@ -1,9 +1,10 @@
 import React from 'react';
 import CartItem from '../components/CartItem.js';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 const CartContainer = () => {
     const {amount, cartItems, total} = useSelector((state) => state.cart);
+    const dispatch = useDispatch();
     if(amount < 1){
         return(
             <section className="cart">
