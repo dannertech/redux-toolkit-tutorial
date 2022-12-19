@@ -12,7 +12,7 @@ export const cartSlice = createSlice({
 name: 'cart',
 initialState,
 reducers: {
-    clearCart: (state, action) => {
+    clearCart: (state) => {
         state.cartitems = [];
     },
 }
